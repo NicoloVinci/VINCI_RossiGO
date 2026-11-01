@@ -1,11 +1,12 @@
 package modello;
 
 public class Bici extends Veicolo {
-    private int marce;
+    private final int marce;
     private final double tariffa = 0.15;
     private final boolean haCestino;
 
-    public Bici(boolean haCestino, int marce) {
+    public Bici(String codice, double livelloBatteriaPercentuale, Stato stato,  int marce,  boolean haCestino) {
+        super(codice, livelloBatteriaPercentuale, stato);
         this.haCestino = haCestino;
         this.marce = marce;
     }

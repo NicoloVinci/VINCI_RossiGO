@@ -5,7 +5,8 @@ public class Monopattino extends Veicolo {
     private final double tariffa = 0.25;
     private final boolean limitatoInZonaPedonale;
 
-    public Monopattino(boolean limitatoInZonaPedonale, double velocitaMassima) {
+    public Monopattino(String codice, double livelloBatteriaPercentuale, Stato stato, boolean limitatoInZonaPedonale, double velocitaMassima) {
+        super(codice, livelloBatteriaPercentuale, stato);
         this.limitatoInZonaPedonale = limitatoInZonaPedonale;
         this.velocitaMassima = velocitaMassima;
     }

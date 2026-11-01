@@ -18,8 +18,15 @@ public class FlottaService {
         this.noleggiAttivi = new HashMap<>();
     }
 
-    public void registraVeicolo(Veicolo v) {
-        this.veicoli.put(v.getCodice(), v);
+    public void registraVeicolo(Veicolo v) throws BatteriaScaricaException, VeicoloNonDisponibileException {
+        veicoli.put(v.getCodice(), v);
+        if(v.getLivelloBatteriaPercentuale() < 15.0) {
+            mettiInRicarica(v.getCodice());
+            throw new BatteriaScaricaException("Batteria < 15%, il veicolo è in ricarica.", v.getLivelloBatteriaPercentuale());
+        }
+        if(v.getStato() == Stato.IN_USO || v.getStato() == Stato.IN_RICARICA) {
+            throw new VeicoloNonDisponibileException("Veicolo attualmente in uso o in ricarica, impossibile registrarlo per un nuovo noleggio.", v);
+        }
     }
 
     public void registraUtente(Utente u) throws CodiceFiscaleNonValidoException {

@@ -27,4 +27,10 @@ public abstract class Veicolo {
     public void setLivelloBatteriaPercentuale(double livelloBatteriaPercentuale) {
         this.livelloBatteriaPercentuale = livelloBatteriaPercentuale;
     }
+
+    public Veicolo(String codice, double livelloBatteriaPercentuale, Stato stato) {
+        this.codice = codice;
+        this.livelloBatteriaPercentuale = livelloBatteriaPercentuale;
+        this.stato = stato;
+    }
 }
