@@ -1,6 +1,6 @@
 package eccezioni;
 
-import modello.Utente;
+import servizio.Utente;
 
 public class UtenteNonTrovatoException extends RossiGoException {
     private final Utente utente;

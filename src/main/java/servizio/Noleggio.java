@@ -1,4 +1,6 @@
-package modello;
+package servizio;
+
+import modello.Veicolo;
 
 public class Noleggio {
     private Utente utente;
@@ -11,5 +13,13 @@ public class Noleggio {
         this.veicolo = veicolo;
         this.orarioInizio = orarioInizio;
         this.orarioFine = orarioFine;
+    }
+
+    public Veicolo getVeicolo() {
+        return veicolo;
+    }
+
+    public Utente getUtente() {
+        return utente;
     }
 }

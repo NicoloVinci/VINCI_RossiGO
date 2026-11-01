@@ -7,4 +7,24 @@ public abstract class Veicolo {
 
     public abstract double calcolaCosto(int minuti);
     public abstract double consumoBatteriaPerMinuto();
+
+    public String getCodice() {
+        return codice;
+    }
+
+    public Stato getStato() {
+        return stato;
+    }
+
+    public void setStato(Stato stato) {
+        this.stato = stato;
+    }
+
+    public double getLivelloBatteriaPercentuale() {
+        return livelloBatteriaPercentuale;
+    }
+
+    public void setLivelloBatteriaPercentuale(double livelloBatteriaPercentuale) {
+        this.livelloBatteriaPercentuale = livelloBatteriaPercentuale;
+    }
 }

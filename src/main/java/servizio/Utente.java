@@ -1,4 +1,4 @@
-package modello;
+package servizio;
 
 public class Utente {
     private String id;
@@ -12,6 +12,22 @@ public class Utente {
         this.nome = nome;
         this.email = email;
         this.codiceFiscale = codiceFiscale;
+        this.creditoInEuro = creditoInEuro;
+    }
+
+    public String getCodiceFiscale() {
+        return codiceFiscale;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public double getCreditoInEuro() {
+        return creditoInEuro;
+    }
+
+    public void setCreditoInEuro(double creditoInEuro) {
         this.creditoInEuro = creditoInEuro;
     }
 }
