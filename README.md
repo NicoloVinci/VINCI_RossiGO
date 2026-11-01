@@ -1,0 +1,5 @@
+## Librerie Esterne Scelte
+
+- **JFiglet (`com.github.lalyos:jfiglet`):** scelta per generare banner testuali in ASCII art in una sola riga di codice senza formattazioni manuali. La uso nel `app.Main` per stampare il titolo `"RossiGo"` all'avvio e le intestazioni delle sezioni.
+- **Codice Fiscale (`it.kamaladafrica:codice-fiscale`):** scelta per avere una validazione formale completa del codice fiscale italiano (incluso il carattere di controllo). La uso in `servizio.FlottaService` (metodo `registraUtente`) per lanciare `CodiceFiscaleNonValidoException` se il codice è errato.
+- **Apache Commons Lang3 (`org.apache.commons:commons-lang3`):** scelta per rendere più puliti e sicuri i controlli sui parametri in ingresso evitando `NullPointerException`. La uso nei costruttori del package `modello` (`Utente` e `Veicolo`) con `StringUtils.isBlank()` per i nomi e `Validate.isTrue()` per il formato dei codici mezzo (`BK-XXXX`, `SC-XXXX`).
